@@ -69,4 +69,20 @@ router.delete('/:concertId', async (req, res) => {
     }
 });
 
+// PUT
+router.put('/:concertId', async (req, res) => {
+    try {
+        const currentUser = await User.findbyId(req.session.user._id);
+        const concert = currentUser.concerts.id(req.params.concertId)
+        concert.set(req.body);
+        await currentUser.save();
+        res.redirect(
+            `/users/${currentUser._id}/applications/${req.params.applicationId}`
+        );
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
+
 module.exports = router;
