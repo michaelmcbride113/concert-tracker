@@ -3,15 +3,17 @@ const router = express.Router();
 
 const User = require('../models/user.js');
 
-// GET
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        res.render('concerts/index.ejs');
+      const currentUser = await User.findById(req.session.user._id);
+      res.render('concerts/index.ejs', {
+        concerts: currentUser.concerts,
+      });
     } catch (error) {
-        console.log(error);
-        res.redirect('/');
+      console.log(error);
+      res.redirect('/');
     }
-});
+  });
 
 router.get('/new', async (req, res) => {
     res.render('concerts/new.ejs');
@@ -60,9 +62,9 @@ router.post('/', async (req, res) => {
 router.delete('/:concertId', async (req, res) => {
     try {
     const currentUser = await User.findbyId(req.session.user._id);
-    currentUser.applications.id(req.params.applicationId).deleteOne();
+    currentUser.concerts.id(req.params.concertId).deleteOne();
     await currentUser.save();
-    res.redirect(`/users/${currentUser._id}/applications`);
+    res.redirect(`/users/${currentUser._id}/concerts`);
 } catch (error) {
     console.log(error);
     res.redirect('/');
@@ -77,7 +79,7 @@ router.put('/:concertId', async (req, res) => {
         concert.set(req.body);
         await currentUser.save();
         res.redirect(
-            `/users/${currentUser._id}/applications/${req.params.applicationId}`
+            `/users/${currentUser._id}/concerts/${req.params.concertId}`
         );
     } catch (error) {
         console.log(error);

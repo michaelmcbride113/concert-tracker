@@ -63,4 +63,3 @@ app.listen(port, () => {
 
 // Bug tracking
 // Submit button not working on New route
-// Adding concerts on the show page not working
