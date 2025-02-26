@@ -35,10 +35,20 @@ app.use(
 
 app.use(passUserToView);
 
+
+// GET
+// app.get('/', (req, res) => {
+//   res.render('index.ejs', {
+//     user: req.session.user,
+//   });
+// });
+
 app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    user: req.session.user,
-  });
+  if(req.session.user) {
+    res.redirect(`/users/${req.session.user._id}/concerts`);
+  } else {
+    res.render('index.ejs');
+  }
 });
 
 app.use('/auth', authController);
