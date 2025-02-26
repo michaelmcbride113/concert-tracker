@@ -21,7 +21,7 @@ router.get('/new', async (req, res) => {
 
 router.get('/:concertId', async (req, res) => {
     try {
-        const currentUser = await User.findbyId(req.session.user._id);
+        const currentUser = await User.findById(req.session.user._id);
         const concert = currentUser.concerts.id(req.params.concertId);
         res.render('concerts/show.ejs', {
             concert: concert,
@@ -33,7 +33,7 @@ router.get('/:concertId', async (req, res) => {
 })
 router.get('/:concertId/edit', async (req, res) => {
     try {
-        const currentUser = await User.findbyId(req.session.user._id);
+        const currentUser = await User.findById(req.session.user._id);
         const concert = currentUser.concerts.id(req.params.concertId);
         res.render('concerts/edit.ejs', {
             concert: concert,
@@ -48,7 +48,7 @@ router.get('/:concertId/edit', async (req, res) => {
 // POST
 router.post('/', async (req, res) => {
     try {
-    const currentUser = await User.findbyId(req.session.user._id);
+    const currentUser = await User.findById(req.session.user._id);
     currentUser.concerts.push(req.body);
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/concerts`);
@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
 // DELETE
 router.delete('/:concertId', async (req, res) => {
     try {
-    const currentUser = await User.findbyId(req.session.user._id);
+    const currentUser = await User.findById(req.session.user._id);
     currentUser.concerts.id(req.params.concertId).deleteOne();
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/concerts`);
@@ -74,7 +74,7 @@ router.delete('/:concertId', async (req, res) => {
 // PUT
 router.put('/:concertId', async (req, res) => {
     try {
-        const currentUser = await User.findbyId(req.session.user._id);
+        const currentUser = await User.findById(req.session.user._id);
         const concert = currentUser.concerts.id(req.params.concertId)
         concert.set(req.body);
         await currentUser.save();

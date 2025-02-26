@@ -35,14 +35,6 @@ app.use(
 
 app.use(passUserToView);
 
-
-// GET
-// app.get('/', (req, res) => {
-//   res.render('index.ejs', {
-//     user: req.session.user,
-//   });
-// });
-
 app.get('/', (req, res) => {
   if(req.session.user) {
     res.redirect(`/users/${req.session.user._id}/concerts`);
@@ -62,4 +54,5 @@ app.listen(port, () => {
 
 
 // Bug tracking
-// Submit button not working on New route
+// Concerts are submitting but data isnt going anywhere
+// remove "Your concerts" link from the home page

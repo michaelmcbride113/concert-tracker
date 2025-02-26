@@ -1,5 +1,3 @@
-<!-- views/applications/show.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +13,9 @@
     <% } %> <% if (concert.memories) { %>
     <p>Memories: <%= concert.memories %> </p>
     <% } %>
-    <a href="/users/<%= user._id %>/concerts/<%= concert._id %>/edit"></a>
+    <a href="/users/<%= user._id %>/concerts/<%= concert._id %>/edit">
+        Edit this entry
+    </a>
 
     <form
       action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=DELETE"
@@ -23,6 +23,5 @@
     >
       <button type="submit">Delete this concert</button>
     </form>
-
   </body>
 </html>

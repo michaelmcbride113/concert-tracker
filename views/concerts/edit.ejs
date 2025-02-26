@@ -13,16 +13,16 @@
     method="POST"
   >
     <label for="bandName">Band name:</label>
-    <input type="text" name="bandName" id="bandName" />
+    <input type="text" name="bandName" id="bandName" value="<%= concert.bandName %>" />
 
     <label for="date">Concert Date:</label>
-    <input type="text" name="date" id="date" value="<%= concerts.date %>">
+    <input type="text" name="date" id="date" value="<%= concert.date %>">
     
     <label for="setlist">Setlist:</label>
-    <textarea name="setlist" id="setlist"><%= concerts.setlist %></textarea>
+    <textarea name="setlist" id="setlist"><%= concert.setlist %></textarea>
     
     <label for="memories">Memories:</label>
-    <textarea name="memories" id="memories"></textarea>
+    <textarea name="memories" id="memories"><%= concert.memories %></textarea>
 
     <button type="submit">Add Concert</button>
 
