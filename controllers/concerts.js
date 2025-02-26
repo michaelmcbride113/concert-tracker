@@ -3,6 +3,7 @@ const router = express.Router();
 
 const User = require('../models/user.js');
 
+// GET
 router.get('/', (req, res) => {
     try {
         res.render('concerts/index.ejs');
@@ -11,5 +12,10 @@ router.get('/', (req, res) => {
         res.redirect('/');
     }
 });
+
+router.get('/new', async (req, res) => {
+    res.render('concerts/new.ejs');
+});
+
 
 module.exports = router;

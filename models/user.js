@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const concertSchema = new mongoose.Schema({
-  band: {
+  bandName: {
     type: String,
     required: true,
   },
