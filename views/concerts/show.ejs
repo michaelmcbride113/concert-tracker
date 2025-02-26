@@ -1,0 +1,28 @@
+<!-- views/applications/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= concert.bandName %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= concert.bandName %> seen on <%= concert.date %></h1>
+    <% if (concert.setlist) { %>
+    <p>Setlist: <%= concert.setlist %></p>
+    <% } %> <% if (concert.memories) { %>
+    <p>Memories: <%= concert.memories %> </p>
+    <% } %>
+    <a href="/users/<%= user._id %>/concerts/<%= concert._id %>/edit"></a>
+
+    <form
+      action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Delete this concert</button>
+    </form>
+
+  </body>
+</html>

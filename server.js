@@ -58,3 +58,9 @@ app.use('/users/:userId/concerts', concertsController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+
+
+
+// Bug tracking
+// Submit button not working on New route
+// Adding concerts on the show page not working
