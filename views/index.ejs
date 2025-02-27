@@ -6,9 +6,16 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Concert Tracker</title>
   </head>
-  <body>
+  <body class="index-body">
     <%- include('./partials/_navbar.ejs') %>
-    <h1>Concert Tracker</h1>
-    <p>An app to track all your concerts!</p>
+    <div class="index-container">
+      <div class="text-container">
+        <h1 class="main-header">Concert Tracker</h1>
+        <p class="subheader">An app to track all your concerts.</p>
+      </div>
+      <div class="auth-links">
+        <a class="signup-link" href="/auth/sign-up">Sign Up</a>
+        <a class="signin-link" href="/auth/sign-in">Sign In</a>
+      </div>
+    </div>
   </body>
-</html>
