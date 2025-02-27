@@ -30,7 +30,7 @@ router.get('/:concertId', async (req, res) => {
         console.log(error);
         res.redirect('/');
     }
-})
+});
 router.get('/:concertId/edit', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
