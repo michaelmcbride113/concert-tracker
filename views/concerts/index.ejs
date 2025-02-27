@@ -8,8 +8,11 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="all-concerts-body">
+    <div class="all-concerts-header">
     <h1>Your Concerts</h1>
     <a href="/users/<%=user._id%>/concerts/new">Add a new Concert</a>
+    </div>
     <ul>
         <% concerts.forEach((concert) => { %>
            
@@ -17,5 +20,6 @@
                     <li><%= concert.bandName %> seen on <%= concert.date %></li>
                 </a>
               <% }) %>
+            </div>
   </body>
 </html>
