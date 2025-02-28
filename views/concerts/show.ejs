@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/stylesheets/show.css" />
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,11 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="show-body"></div>
+    <div class="show-header"></div>
     <h1><%= concert.bandName %> seen on <%= concert.date %></h1>
+    <div class="show-sidebar"></div>
+    <div class="show-actions"></div>
     <% if (concert.setlist) { %>
     <p>Setlist: <%= concert.setlist %></p>
     <% } %> <% if (concert.memories) { %>
