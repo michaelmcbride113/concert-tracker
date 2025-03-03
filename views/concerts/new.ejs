@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Add a New Concert</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add a New Concert</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Concert</h1>
-<div class="new-body">
-<form action="/users/<%= user._id %>/concerts" method="POST">
-    <label for="bandName">Band name:</label>
-    <input type="text" name="bandName" id="bandName" />
-  
-    <label for="date">Concert Date:</label>
-    <input type="text" name="date" id="date" />
-  
-    <label for="setlist">Setlist:</label>
-    <textarea name="setlist" id="setlist"></textarea>
-  
-    <label for="memories">Memories:</label>
-    <textarea name="memories" id="memories"></textarea>
-  <button type="submit">Add Concert</button>
-</form>
-</div>
-  </body>
+    <div class="new-body">
+      <form action="/users/<%= user._id %>/concerts" method="POST">
+        <label for="bandName">Band name:</label>
+        <input type="text" name="bandName" id="bandName" />
+
+        <label for="date">Concert Date:</label>
+        <input type="text" name="date" id="date" />
+
+        <label for="setlist">Setlist:</label>
+        <textarea name="setlist" id="setlist"></textarea>
+
+        <label for="memories">Memories:</label>
+        <textarea name="memories" id="memories"></textarea>
+        <button type="submit">Add Concert</button>
+      </form>
+    </div>
+</body>
+
 </html>

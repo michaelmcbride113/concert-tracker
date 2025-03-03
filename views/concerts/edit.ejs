@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 
-  <title>Editing <%= concert.bandName %></title>
+  <title>Editing <%= concert.bandName %>
+  </title>
 </head>
+
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <div class="edit-body">
-  <h1>Edit <%= concert.bandName %> seen on <%= concert.date %></h1>
-  <form
-    action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=PUT"
-    method="POST"
-  >
-    <label for="bandName">Band name:</label>
-    <input type="text" name="bandName" id="bandName" value="<%= concert.bandName %>" />
+    <div class="edit-body">
+      <h1>Edit <%= concert.bandName %> seen on <%= concert.date %>
+      </h1>
+      <form action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=PUT" method="POST">
+        <label for="bandName">Band name:</label>
+        <input type="text" name="bandName" id="bandName" value="<%= concert.bandName %>" />
 
-    <label for="date">Concert Date:</label>
-    <input type="text" name="date" id="date" value="<%= concert.date %>">
-    
-    <label for="setlist">Setlist:</label>
-    <textarea name="setlist" id="setlist"><%= concert.setlist %></textarea>
-    
-    <label for="memories">Memories:</label>
-    <textarea name="memories" id="memories"><%= concert.memories %></textarea>
+        <label for="date">Concert Date:</label>
+        <input type="text" name="date" id="date" value="<%= concert.date %>">
 
-    <button type="submit">Add Concert</button>
+        <label for="setlist">Setlist:</label>
+        <textarea name="setlist" id="setlist"><%= concert.setlist %></textarea>
 
-  </form>
-</div>
+        <label for="memories">Memories:</label>
+        <textarea name="memories" id="memories"><%= concert.memories %></textarea>
+
+        <button type="submit">Add Concert</button>
+
+      </form>
+    </div>
 </body>
+
 </html>

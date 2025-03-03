@@ -1,86 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
-    font-family: 'Lora', sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-color: #6ca9aa;
-  }
-  
-.index-body {
-    background-image: url('https://farm6.staticflickr.com/5194/5837056564_b8f95b0570_o.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 75vh;
-    text-shadow: -.5px -.5px 0 black, .5px -.5px 0 black, -.5px .5px 0 black, .5px .5px 0 black;
-    width: 100vw;
-    color: rgb(233, 195, 195);
-  }
-  
-  .main-header {
-    font-weight: bold;
-    color: rgb(216, 32, 84);
-    text-shadow: -2px -2px 0 #363535, 2px -2px 0 #363535, -2px 2px 0 #363535, 2px 2px 0 #363535;
-    font-size: 5.6em;
-    margin: -160px 19px 0 20px;
-  }
-  
-  .subheader {
-    margin: 0 20px 0 20px;
-    font-size: 1.4em;
-  }
-  
-  .index-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .auth-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 80px 0 0;
-    height: 100%;
-  }
-  
-  /* Navbar */
+  font-family: 'Lora', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #6ca9aa;
+}
 
-  .signup-link,
-  .signin-link {
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 8px 0;
-    border-radius: 25px;
-    width: 10em;
-    text-align: center;
-  }
-  
-  .signup-link {
-    background-color: rgb(216, 32, 84);
-    color: white;
-    margin: 0 0 20px 0;
-  }
-  
-  .signup-link:hover {
-    background-color: rgb(233, 195, 195);
-  }
-  
-  .signin-link {
-    background-color: rgb(233, 195, 195);
-    color: black;
-    margin: 20px 0 0 0;
-  }
-  
-  .signin-link:hover {
-    background-color: rgb(216, 32, 84);
-  }
-  
+.index-body {
+  background-image: url('https://farm6.staticflickr.com/5194/5837056564_b8f95b0570_o.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75vh;
+  text-shadow: -.5px -.5px 0 black, .5px -.5px 0 black, -.5px .5px 0 black, .5px .5px 0 black;
+  width: 100vw;
+  color: rgb(233, 195, 195);
+}
+
+.main-header {
+  font-weight: bold;
+  color: rgb(216, 32, 84);
+  text-shadow: -2px -2px 0 #363535, 2px -2px 0 #363535, -2px 2px 0 #363535, 2px 2px 0 #363535;
+  font-size: 5.6em;
+  margin: -160px 19px 0 20px;
+}
+
+.subheader {
+  margin: 0 20px 0 20px;
+  font-size: 1.4em;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px 0 0;
+  height: 100%;
+}
+
+/* Navbar */
+
+.signup-link,
+.signin-link {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 8px 0;
+  border-radius: 25px;
+  width: 10em;
+  text-align: center;
+}
+
+.signup-link {
+  background-color: rgb(216, 32, 84);
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.signup-link:hover {
+  background-color: rgb(233, 195, 195);
+}
+
+.signin-link {
+  background-color: rgb(233, 195, 195);
+  color: black;
+  margin: 20px 0 0 0;
+}
+
+.signin-link:hover {
+  background-color: rgb(216, 32, 84);
+}
+
 
 /* Sign in / Sign up */
 
@@ -130,92 +130,92 @@ button {
 /* index page */
 
 .all-concerts-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .all-concerts-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 90%;
-  }
-  
-  .add-app-link {
-    padding: 10px;
-    background-color: #ce4866;
-    color: white;
-    border-radius: 30px;
-    border: none;
-    font-size: 1.1em;
-    padding: 2px 25px;
-    text-decoration: none;
-  }
-  
-  .add-app-link:hover {
-    background-color: #e84a6c;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-concerts-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.add-app-link {
+  padding: 10px;
+  background-color: #ce4866;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  padding: 2px 25px;
+  text-decoration: none;
+}
+
+.add-app-link:hover {
+  background-color: #e84a6c;
+}
+
 /* shown concerts */
 
 ul {
-    list-style: none;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  ul > a {
-    text-decoration: none;
-    color: #1c2e5b;
-    width: 50%;
-    background-color: #f6e7e7;
-    border-radius: 30px;
-    padding: 10px 20px;
-    margin: 15px 0;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  ul > a:hover {
-    background-color: #4b598e;
-    color: white;
-  }
-  
+  list-style: none;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .new-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .new-body > form,
-  .edit-body > form {
-    height: 70%;
-  }
-  
-  textarea,
-  select {
-    border: 1px solid rgb(182, 182, 182);
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  select {
-    margin-bottom: 10px;
-  }
-  
-  .edit-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+ul>a {
+  text-decoration: none;
+  color: #1c2e5b;
+  width: 50%;
+  background-color: #f6e7e7;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul>a:hover {
+  background-color: #4b598e;
+  color: white;
+}
+
+
+.new-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.new-body>form,
+.edit-body>form {
+  height: 70%;
+}
+
+textarea,
+select {
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+.edit-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

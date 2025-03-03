@@ -5,15 +5,15 @@ const User = require('../models/user.js');
 
 router.get('/', async (req, res) => {
     try {
-      const currentUser = await User.findById(req.session.user._id);
-      res.render('concerts/index.ejs', {
-        concerts: currentUser.concerts,
-      });
+        const currentUser = await User.findById(req.session.user._id);
+        res.render('concerts/index.ejs', {
+            concerts: currentUser.concerts,
+        });
     } catch (error) {
-      console.log(error);
-      res.redirect('/');
+        console.log(error);
+        res.redirect('/');
     }
-  });
+});
 
 router.get('/new', async (req, res) => {
     res.render('concerts/new.ejs');
@@ -48,10 +48,10 @@ router.get('/:concertId/edit', async (req, res) => {
 // POST
 router.post('/', async (req, res) => {
     try {
-    const currentUser = await User.findById(req.session.user._id);
-    currentUser.concerts.push(req.body);
-    await currentUser.save();
-    res.redirect(`/users/${currentUser._id}/concerts`);
+        const currentUser = await User.findById(req.session.user._id);
+        currentUser.concerts.push(req.body);
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/concerts`);
     } catch (error) {
         console.log(error);
         res.redirect('/');
@@ -61,13 +61,13 @@ router.post('/', async (req, res) => {
 // DELETE
 router.delete('/:concertId', async (req, res) => {
     try {
-    const currentUser = await User.findById(req.session.user._id);
-    currentUser.concerts.id(req.params.concertId).deleteOne();
-    await currentUser.save();
-    res.redirect(`/users/${currentUser._id}/concerts`);
-} catch (error) {
-    console.log(error);
-    res.redirect('/');
+        const currentUser = await User.findById(req.session.user._id);
+        currentUser.concerts.id(req.params.concertId).deleteOne();
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/concerts`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
     }
 });
 

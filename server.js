@@ -40,7 +40,7 @@ app.use(
 app.use(passUserToView);
 
 app.get('/', (req, res) => {
-  if(req.session.user) {
+  if (req.session.user) {
     res.redirect(`/users/${req.session.user._id}/concerts`);
   } else {
     res.render('index.ejs');
