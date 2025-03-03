@@ -9,7 +9,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Concert</h1>
-
+<div class="new-body">
 <form action="/users/<%= user._id %>/concerts" method="POST">
     <label for="bandName">Band name:</label>
     <input type="text" name="bandName" id="bandName" />
@@ -24,6 +24,6 @@
     <textarea name="memories" id="memories"></textarea>
   <button type="submit">Add Concert</button>
 </form>
-
+</div>
   </body>
 </html>

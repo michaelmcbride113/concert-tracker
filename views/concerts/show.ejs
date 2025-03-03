@@ -1,4 +1,3 @@
-<!-- <link rel="stylesheet" href="/stylesheets/show.css" /> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,11 +8,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <div class="show-body"></div></div>
-    <div class="show-header"></div>
     <h1><%= concert.bandName %> seen on <%= concert.date %></h1>
-    <div class="show-sidebar"></div>
-    <div class="show-actions"></div>
     <% if (concert.setlist) { %>
     <p>Setlist: <%= concert.setlist %></p>
     <% } %> <% if (concert.memories) { %>
@@ -22,12 +17,13 @@
     <a href="/users/<%= user._id %>/concerts/<%= concert._id %>/edit">
         Edit this entry
     </a>
-  
+  </div>
     <form
       action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=DELETE"
       method="POST"
     >
       <button type="submit">Delete this concert</button>
+    
     </form>
   </body>
 </html>

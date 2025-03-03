@@ -9,6 +9,7 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
+  <div class="edit-body">
   <h1>Edit <%= concert.bandName %> seen on <%= concert.date %></h1>
   <form
     action="/users/<%= user._id %>/concerts/<%= concert._id %>?_method=PUT"
@@ -29,5 +30,6 @@
     <button type="submit">Add Concert</button>
 
   </form>
+</div>
 </body>
 </html>
