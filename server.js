@@ -56,7 +56,3 @@ app.listen(port, () => {
 });
 
 
-
-// Bug tracking
-// Concerts are submitting but data isnt going anywhere
-// remove "Your concerts" link from the home page
